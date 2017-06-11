@@ -2555,3 +2555,10 @@ i.in{
 		background-position: -191px -4px;
 	}
 }
+
+/*Custom Style for rafayjamal.github.io*/
+.rj-glyph{
+	height: 60px;
+	width:60px; 
+	color:#898D9D;
+}

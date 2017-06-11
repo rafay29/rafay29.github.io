@@ -29,6 +29,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic'
 	 rel='stylesheet' type='text/css'>
+	 <link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="js/move-top.js"></script>
 	<script type="text/javascript" src="js/easing.js"></script>
 	<script type="text/javascript">
@@ -37,8 +38,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				event.preventDefault();
 				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
 			});
+			loadData();
 		});
 	</script>
+	<script src="js/details.js"></script>
 </head>
 
 <body>
@@ -70,13 +73,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<p>I'm a Web developer born in India. </p>
 					<span class="line"></span>
 					<ul class="social-icons">
-						<li><a href="#"><i class="twitter"></i></a></li>
-						<li><a href="#"><i class="dribble"></i></a></li>
-						<li><a href="#"><i class="behance"></i></a></li>
+						<li><a href="https://www.facebook.com/rafaynizami"><i class="rj-glyph fa fa-facebook fa-3x" aria-hidden="true"></i></a></li>
+						<li><a href="https://github.com/rafayjamal"><i class="rj-glyph fa fa-github fa-3x" aria-hidden="true"></i></a></li>
+						<li><a href="https://www.youtube.com/channel/UCpmu213C5VrUl53E6X1bu8A"><i class="rj-glyph fa fa-youtube-play fa-3x" aria-hidden="true"></i></a></li>
 					</ul>
 					<label></label>
 					<ul class="details">
-						<li>Age : <a href="#">26</a></li>
+						<li>Age : <a href="#" id="age"></a></li>
 						<li>Country : <a href="#">India</a></li>
 						<li>Working at : <a href="http://www.citiustech.com/">CitiusTech</a></li>
 					</ul>
@@ -115,29 +118,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<div class="col-md-4 about-section-grid-3">
 						<h4>MY SKILLS</h4>
-						<p>Design Programs</p>
+						<p>Coding Programs</p>
 						<div class="progress-grid">
 							<div class="meter red">
-								<span style="width:100%;">
-							  	<div class="progress_desc">Adobe Photoshop</div>
-								<div class="percent">100%</div> 
+								<span style="width:75%;">
+							  	<div class="progress_desc">Angular2</div>
+								<div class="percent">75%</div> 
 						        <div class="clearfix"> </div>
 						       </span>
 							</div>
 							<div class="meter animate">
-								<span style="width:65%;"><div class="progress_desc">adobe illustrator</div>
-								<div class="percent">75%</div> 
+								<span style="width:80%;"><div class="progress_desc">JavaScript / jquery</div>
+								<div class="percent">80%</div> 
 						        <div class="clearfix"> </div>
 							   </span>
 							</div>
 							<div class="meter">
-								<span style="width:55%;"><div class="progress_desc">Adobe InDesign</div>
-								 <div class="percent">55%</div> 
+								<span style="width:60%;"><div class="progress_desc">TypeScript</div>
+								 <div class="percent">60%</div> 
 								 <div class="clearfix"> </div>
 							    </span>
 							</div>
 						</div>
-						<p>Coding Programs</p>
 						<div class="progress-grid">
 							<div class="meter red">
 								<span style="width:80%;">
@@ -152,12 +154,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						        <div class="clearfix"> </div>
 							   </span>
 							</div>
-							<div class="meter">
-								<span style="width:55%;"><div class="progress_desc">JavaScript / jquery</div>
-								 <div class="percent">55%</div> 
-								 <div class="clearfix"> </div>
-							    </span>
-							</div>
 						</div>
 					</div>
 					<div class="clearfix"></div>
@@ -170,21 +166,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="portfolio-section-top-row">
 				<div class="container">
 					<div class="portfolio-section-head text-center">
-						<h3>PORTFOLIO</h3>
+						<h3>EXPERIENCE</h3>
 						<label></label>
 						<p>Do you want to know me?</p>
 					</div>
 					<div class="col-md-4 portfolio-section-top-row-left-grid">
 						<div class="project-name">
 							<span>project-name</span>
-							<h3>ios 7 Weather App Design</h3>
+							<h3 id="current-project-name"> </h3>
+						</div>
+						<div class="project-description">
+							<span>Client</span>
+							<p id="current-project-client"></p>
 						</div>
 						<div class="project-description">
 							<span>project description</span>
 							<ul>
-								<li><a href="#">Os 7 Design</a></li>
-								<li><a href="#">Weather App icons</a></li>
-								<li><a href="#">iPhone App Design</a></li>
+								<li>Responsive Design</li>
+								<li>Weather App icons</li>
+								<li>iPhone App Design</li>
 							</ul>
 							<p>Lorem ipsum dolor sit amet, consectetu et. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
 								ut aliquip ex ea commodo consequat.</p>
@@ -192,10 +192,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="address">
 							<span>project web site or address</span>
 							<a href="">http://www.uipixels.com/</a>
-						</div>
-						<div class="tags">
-							<span>tags</span>
-							<p>iPhone,iOs 7,Weather,App,Design,apple</p>
 						</div>
 					</div>
 					<div class="col-md-8 portfolio-section-top-row-right-grid">
