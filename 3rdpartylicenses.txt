@@ -614,7 +614,7 @@ MIT
 MIT
 MIT
 
-angularfire2@5.0.0-rc.6.0
+angularfire2@5.0.0-rc.7
 MIT
 MIT
 
